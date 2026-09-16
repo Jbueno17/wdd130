@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cor-de-fundo-do-titulo: #f06;
+    --cor-do-texto-do-titulo: #333;
+    --fonte-titulo: 'Montserrat', Helvetica, sans-serif;
+    --padding: 1rem;
+    --border: 1px solid rgb(0 0 0 / 0.1)
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
@@ -15,7 +23,7 @@ body {
 }
 
 nav {
-    background-color: steelblue;
+    background-color: var(--cor-do-texto-do-titulo);
 }
 
 nav a {
@@ -25,7 +33,10 @@ nav a {
 }
 
 h1 {
-    color: steelblue;
+    background-color: var(--cor-de-fundo-do-titulo);
+    color: var(--cor-do-texto-do-titulo);
+    font-family: var(--fonte-titulo);
+    padding: var(--padding);
 }
 
 main img {
@@ -46,6 +57,7 @@ aside {
     color: #333;
     text-align: center;
     position: relative;
+    padding: var(--padding);
 }
 
 aside img {
