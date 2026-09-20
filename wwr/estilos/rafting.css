@@ -1,0 +1,151 @@
+:root {
+    --cor-primaria: #0b3954;
+    --cor-secundaria: #087e8b;
+    --cor-acento: #ffcc33;
+    --cor-clara: #f4f7f8;
+    --cor-escura: #222222;
+    --cor-branca: #ffffff;
+    --fonte-titulo: "Times New Roman", "Georgia", serif;
+    --fonte-body: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-body);
+    color: var(--cor-escura);
+    background-color: var(--cor-clara);
+    line-height: 1.6;
+}
+
+header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 1rem 2rem;
+}
+
+nav a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.75rem;
+}
+
+nav a:hover {
+    color: var(--cor-acento);
+}
+
+h1, h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    text-align: center;  
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    color: var(--cor-branca);
+}
+
+p {
+    margin: 1rem 0;
+
+}
+section {
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+article {
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca); /* texto branco - certifique-se de que haja contraste suficiente com a cor de fundo */
+
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+    padding: 1rem;
+    color: var(--cor-branca);
+    background-color: var(--cor-escura);
+}
+
+.hero article p {
+    margin: 0;
+}
+
+.hero article img {
+    float: right;
+    width: 150px;
+    margin: 0 0 1rem 1rem;
+    border: 3px solid var(--cor-clara);
+    box-shadow: 0 2px 8px var(--cor-primaria);
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca);
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--cor-clara);
+}
+
+footer a img {
+    text-decoration: none;
+    border: none;
+}
+
+footer a:has(img) {
+    text-decoration: none;
+}
+
+footer img {
+    width: 35px;
+    height: 35px;
+    margin: 0 0.4rem;
+    vertical-align: middle;
+}
+
