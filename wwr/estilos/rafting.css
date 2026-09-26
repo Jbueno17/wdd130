@@ -31,7 +31,25 @@ header, main, footer {
 header {
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
-    padding: 1rem 2rem;
+    padding: 20px;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    display: grid;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -41,8 +59,24 @@ nav a {
     margin: 0 0.75rem;
 }
 
+
+
 nav a:hover {
     color: var(--cor-acento);
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 h1, h2 {
@@ -60,9 +94,28 @@ p {
     margin: 1rem 0;
 
 }
-section {
-    margin: 2rem 0;
-    padding: 1rem;
+
+.aventuras {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.aventuras figure {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.aventuras img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.aventuras figcaption {
+    padding: 10px;
+    font-weight: bold;
 }
 
 article {
@@ -121,8 +174,12 @@ article {
 footer {
     background-color: var(--cor-secundaria);
     color: var(--cor-branca);
-    padding: 2rem;
+    padding: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 footer p {
@@ -149,3 +206,14 @@ footer img {
     vertical-align: middle;
 }
 
+footer .redes-sociais {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+footer .redes-sociais img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
