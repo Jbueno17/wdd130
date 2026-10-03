@@ -128,10 +128,11 @@ nav a:hover {
     border: 1px solid #ccc;
 }
 
-.mapa iframe {
+.mapa img {
     width: 100%;
     height: 360px;
-    border: 0;
+    object-fit: cover;
+    border: 1px solid #ccc;
 }
 
 
