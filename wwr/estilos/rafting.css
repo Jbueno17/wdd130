@@ -1,7 +1,1092 @@
+/*================================================
+    PAGINA INICIAL
+==================================================*/
+
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #99c4d8;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+header {
+    width: 100%;
+    min-height: 80px;
+
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+
+    padding: 10px 5%;
+
+    background-color: #1f2f24;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+
+.botao-reserva {
+    display: inline-block;
+    background-color: #dfc99a;
+    color: #17251f;
+    padding: 16px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.botao-reserva:hover {
+    background-color: #cbb27e;
+    color: #17251f;
+}
 
 
 
 
+/* NAV PRINCIPAL */
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 45px;
+}
+
+header nav a {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #d9c49a;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+}
+
+.hero > img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* CAMADA ESCURA SOBRE A IMAGEM */
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+/* TEXTO SOBRE A IMAGEM */
+
+.hero-conteudo {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    width: 80%;
+    max-width: 600px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-conteudo h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    
+}
+
+.hero-conteudo p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.botao {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background-color: #d6c39b;
+    color: #1f2f24;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.botao-principal {
+    margin-top: 20px;
+}
+
+
+/* ================================
+   INTRODUÇÃO
+================================ */
+
+.introducao {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 70px 30px;
+
+    text-align: center;
+}
+
+.introducao h2 {
+    color: #2d4935;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    font-size: 18px;
+}
+
+
+/* ================================
+   ATIVIDADES
+================================ */
+
+.atividades {
+    padding: 70px 7%;
+
+    background-color: #f7f5ef;
+
+    text-align: center;
+}
+
+.atividades h2 {
+    color: #2d4935;
+    font-size: 35px;
+
+    margin-bottom: 45px;
+}
+
+
+/* CSS GRID */
+
+.grid-atividades {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* CARDS */
+
+.card {
+    background-color: white;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 25px;
+}
+
+.card h3 {
+    color: #2d4935;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   SEÇÃO SOBRE
+================================ */
+
+.sobre {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    padding: 90px 8%;
+
+    background-color: #dfcda9;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+.sobre-conteudo h2 {
+    color: #263d2d;
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+}
+
+.sobre-conteudo p {
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+
+/* ================================
+   NEWSLETTER
+================================ */
+
+.newsletter {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 30px;
+}
+
+.newsletter-texto h2 {
+    color: #2d4935;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.newsletter-texto p {
+    font-size: 17px;
+}
+
+
+/* FORMULÁRIO */
+
+.newsletter form {
+    display: grid;
+
+    gap: 18px;
+
+    padding: 30px;
+
+    background-color: #f3f1e9;
+
+    border-radius: 6px;
+}
+
+.campo {
+    display: grid;
+
+    gap: 7px;
+}
+
+.campo label {
+    font-weight: bold;
+
+    color: #2d4935;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 4px;
+
+    font-size: 16px;
+}
+
+.campo input:focus {
+    outline: 2px solid #2d4935;
+}
+
+
+/* BOTÃO DO FORMULÁRIO */
+
+.newsletter button {
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: #2d4935;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #1f2f24;
+}
+
+
+/* ================================
+   RODAPÉ
+================================ */
+
+footer {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 30px 6%;
+
+    background-color: #1f2f24;
+
+    color: white;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer nav {
+    display: flex;
+
+    gap: 20px;
+}
+
+footer nav a {
+    color: white;
+
+    font-size: 14px;
+}
+
+footer nav a:hover {
+    color: #d6c39b;
+}
+
+
+/* REDES SOCIAIS */
+
+.redes-sociais {
+    display: flex;
+
+    gap: 8px;
+}
+
+.redes-sociais a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: white;
+
+    color: #1f2f24;
+
+    border-radius: 3px;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media screen and (max-width: 800px) {
+
+    header {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 15px;
+    }
+
+    header nav {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 40px;
+    }
+
+    .hero-conteudo p {
+        font-size: 17px;
+    }
+
+
+    /* GRID */
+
+    .grid-atividades {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SOBRE */
+
+    .sobre {
+        grid-template-columns: 1fr;
+
+        padding: 60px 7%;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter {
+        grid-template-columns: 1fr;
+
+        padding: 60px 7%;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        justify-items: center;
+    }
+
+}
+
+/* ================================
+   Pagina de Passeios
+================================ */
+
+/* =====================================
+   PÁGINA DE PASSEIOS
+===================================== */
+
+/* Cabeçalho e navegação */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #1e3026;
+}
+
+/* Logotipo à esquerda */
+
+header > a img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* Links no canto superior direito */
+
+header nav {
+    margin-left: auto;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 42px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+header nav a:hover {
+    color: #d9c39b;
+}
+
+/* Letras brancas e em negrito */
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* Efeito ao passar o mouse */
+header nav ul li a:hover {
+    color: #d9c39b;
+}
+
+.btn-contato {
+    display: inline-block;
+    background-color: #f5d9c5;
+    color: #333;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-contato:hover {
+    background-color: #e8c1a5;
+    
+}
+
+/* Adaptação para celulares */
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    header nav {
+        margin-left: 0;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+}
+
+.passeio-hero {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 55px 7%;
+    background-color: #e9dfcb;
+}
+
+.passeio-hero-conteudo {
+    max-width: 500px;
+}
+
+.subtitulo {
+    color: #7a7952;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.passeio-hero h1 {
+    color: #354332;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.passeio-hero-conteudo > p:not(.subtitulo) {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.passeio-hero-imagem img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border: 7px solid #fffaf0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.botao-acao {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #414b36;
+    color: #ffffff;
+    border: 2px solid #414b36;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao-acao:hover {
+    background-color: #697653;
+    border-color: #697653;
+    transform: translateY(-2px);
+}
+
+/* TÍTULOS DAS SEÇÕES */
+
+.titulo-secao {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    color: #354332;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    margin-bottom: 15px;
+}
+
+.titulo-secao > p:last-child {
+    color: #55574e;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* CARTÕES DOS PASSEIOS */
+
+.lista-passeios {
+    padding: 75px 6%;
+    background-color: #ffffff;
+}
+
+.passeios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.cartao-passeio {
+    display: flex;
+    flex-direction: column;
+    background-color: #faf7f0;
+    border: 1px solid #e1d5bf;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.cartao-passeio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+}
+
+.cartao-passeio > img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.cartao-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 25px;
+}
+
+.categoria-passeio {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 12px;
+    background-color: #e4e2d0;
+    color: #414b36;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cartao-conteudo h3 {
+    margin-bottom: 15px;
+    color: #354332;
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.cartao-conteudo p {
+    margin-bottom: 18px;
+    color: #4d4d45;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cartao-conteudo ul {
+    padding-left: 20px;
+    margin-bottom: 22px;
+    color: #414b36;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.link-passeio {
+    margin-top: auto;
+    padding-top: 10px;
+    color: #536746;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.link-passeio:hover {
+    color: #8a673c;
+    text-decoration: underline;
+}
+
+/* TABELA COMPARATIVA */
+
+.tabela-secao {
+    padding: 75px 6%;
+    background-color: #eee2d0;
+}
+
+.tabela-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+    background-color: #ffffff;
+    border: 1px solid #d7c6a9;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+}
+
+.tabela-passeios {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabela-passeios th {
+    padding: 17px 15px;
+    background-color: #414b36;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.tabela-passeios td {
+    padding: 17px 15px;
+    border-bottom: 1px solid #e7dfd2;
+    color: #41433b;
+    vertical-align: middle;
+}
+
+.tabela-passeios tbody tr:nth-child(even) {
+    background-color: #f8f4eb;
+}
+
+.tabela-passeios tbody tr:hover {
+    background-color: #e9e5d5;
+}
+
+.tabela-passeios td:first-child {
+    font-weight: bold;
+    color: #354332;
+}
+
+.tabela-passeios td a {
+    display: inline-block;
+    padding: 7px 12px;
+    background-color: #e4e2d0;
+    color: #354332;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.tabela-passeios td a:hover {
+    background-color: #414b36;
+    color: #ffffff;
+}
+
+.aviso-tabela {
+    max-width: 1200px;
+    margin: 15px auto 0;
+    color: #55574e;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* CHAMADA PARA CONTATO */
+
+.chamada-contato {
+    padding: 75px 7%;
+    background:
+        linear-gradient(
+            rgba(35, 45, 32, 0.90),
+            rgba(35, 45, 32, 0.90)
+        ),
+        url("../imagens/vista-da-floresta.jpg")
+        center / cover no-repeat;
+    text-align: center;
+    color: #ffffff;
+}
+
+.chamada-conteudo {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.chamada-contato .subtitulo {
+    color: #dfc99e;
+}
+
+.chamada-contato h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.chamada-contato p:not(.subtitulo) {
+    margin-bottom: 28px;
+    color: #f1eee6;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.botao-claro {
+    background-color: #e8d5b2;
+    color: #354332;
+    border-color: #e8d5b2;
+}
+
+.botao-claro:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #354332;
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 900px) {
+    .passeio-hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+    }
+
+    .passeio-hero-conteudo {
+        max-width: 700px;
+    }
+
+    .passeio-hero-imagem img {
+        height: 350px;
+    }
+
+    .passeios-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .cartao-passeio > img {
+        height: 200px;
+    }
+
+    .cartao-conteudo {
+        padding: 20px;
+    }
+
+    .tabela-passeios {
+        min-width: 800px;
+    }
+}
+
+/* CELULARES */
+
+@media screen and (max-width: 550px) {
+    .passeio-hero {
+        padding: 35px 5%;
+        gap: 25px;
+    }
+
+    .passeio-hero h1 {
+        font-size: 2rem;
+    }
+
+    .passeio-hero-conteudo > p:not(.subtitulo) {
+        font-size: 15px;
+    }
+
+    .passeio-hero-imagem img {
+        height: 240px;
+        border-width: 4px;
+    }
+
+    .lista-passeios,
+    .tabela-secao {
+        padding: 50px 5%;
+    }
+
+    .passeios-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 25px;
+    }
+
+    .cartao-passeio > img {
+        height: 230px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 30px;
+    }
+
+    .chamada-contato {
+        padding: 55px 6%;
+    }
+
+    .chamada-contato h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Ícones pequenos no rodapé */
+
+footer .redes-sociais {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-left: auto;
+}
+
+footer .redes-sociais a img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* Ajuste para celulares */
+
+@media screen and (max-width: 550px) {
+    footer .redes-sociais a img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* ================================
+   Pagina de Contato
+================================ */
 
 /* RESET */
 * {
@@ -37,6 +1122,7 @@ header {
 
     border-bottom: 2px solid #333;
 }
+
 
 
 /* LOGO */
